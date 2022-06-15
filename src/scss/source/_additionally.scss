@@ -56,12 +56,15 @@
 // ! </Функции>============================================================================================================================================// !
 
 // ! <Переменные >=============================================================================================================================================// !
-$mainFontSize: 16; // @ px
-$mainFontFamily: Arial, sans-serif;
-$mainFontColor: #000;
+$main-fontSize: 14; // @ px
+$line-height: 20px;
+$main-fontFamily: "Open Sans", sans-serif;
+$main-fontColor: #86878b;
+$second-color: #ff8b38;
+$title-color: #333333;
 
 $additionalPx: 10; // * Нужно что бы к стенкам не прилипал контент @ px
-$container: 1195 + $additionalPx; // @ px
+$container: 1095 + $additionalPx; // @ px
 
 $md1: $container;
 $md2: 992; // @ em

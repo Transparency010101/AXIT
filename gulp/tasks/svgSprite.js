@@ -14,7 +14,6 @@ export const svgSprive = () => {
             mode: {
                 stack: {
                     sprite: '../icons/icons.svg',
-                    example: true,
                 }
             },
         }))

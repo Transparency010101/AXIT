@@ -1,3 +1,61 @@
 /* ! <Template>=============================================================================================================================================*/
-/* none */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid;
+    border-radius: 5px;
+    &__text {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+
+.main-button {
+    @extend .button;
+    background-color: $second-color;
+    border-color: $second-color;
+}
+
+.second-button {
+    @extend .button;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.section-title {
+    font-size: 20px;
+    line-height: 43px;
+    font-weight: 700;
+    color: #212121;
+}
+
+hr.line {
+    background-color: $second-color;
+    width: 64px;
+    height: 2px;
+}
+
+.temp-img {
+    background-color: #9a9a9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+    img {
+        width: 453px;
+        height: 303px;
+    }
+
+    &__text {
+        opacity: 0.21;
+        font-size: 33.1px;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+}
 /* ! </Template>============================================================================================================================================*/
