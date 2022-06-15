@@ -38,7 +38,7 @@
 // ! <Функции>=============================================================================================================================================// !
 @function rem($value) {
     // * px to rem
-    $remValue: math.div($value, $mainFontSize) + rem;
+    $remValue: math.div($value, $main-fontSize) + rem;
     @return $remValue;
 }
 
@@ -50,7 +50,7 @@
 
 @function em($value) {
     // * px to em
-    $remValue: math.div($value, $mainFontSize) + em;
+    $remValue: math.div($value, $main-fontSize) + em;
     @return $remValue;
 }
 // ! </Функции>============================================================================================================================================// !
