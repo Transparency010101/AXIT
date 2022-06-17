@@ -6,11 +6,44 @@
 
     border: 2px solid;
     border-radius: 5px;
+
+    position: relative;
+
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+
+        transition: all 0.3s ease 0s;
+    }
+
+    &::after {
+        opacity: 1;
+        transition: all 0.3s ease 0.2s;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        left: 0;
+    }
+
     &__text {
         font-size: 15px;
         line-height: 20px;
         font-weight: 600;
-        color: #fff;
+        text-transform: capitalize;
+
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -18,12 +51,31 @@
     @extend .button;
     background-color: $second-color;
     border-color: $second-color;
+    &::before,
+    &::after {
+        background-color: #ffaa55;
+    }
+    &__text {
+        color: #fff;
+    }
 }
 
 .second-button {
     @extend .button;
     background-color: transparent;
     border-color: #fff;
+    &::before,
+    &::after {
+        background-color: #ffffff;
+    }
+    &__text {
+        
+    }
+
+    &:hover > span {
+        color: #000;
+        transition-delay: 0.2s;
+    }
 }
 
 .section-title {
@@ -33,10 +85,24 @@
     color: #212121;
 }
 
-hr.line {
+hr.main-line {
     background-color: $second-color;
     width: 64px;
     height: 2px;
+}
+
+hr.second-line {
+    width: 74px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.presentable-text {
+    opacity: 0.8;
+    font-family: "Raleway", sans-serif;
+    font-size: rem(16);
+    line-height: rem(23);
+    font-weight: 300;
 }
 
 .temp-img {
