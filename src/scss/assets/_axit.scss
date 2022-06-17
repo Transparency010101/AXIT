@@ -14,7 +14,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media only screen and (max-width: em($md1)) {
+        @media only screen and (max-width: em($md2)) {
             flex-direction: column;
             align-items: center;
         }
@@ -23,11 +23,11 @@
     &__right {
         color: #fff;
         flex: 1 1 50%;
-        max-width: rem(520);
-        @media only screen and (max-width: em($md1)) {
+        max-width: rem(550);
+        @media only screen and (max-width: em($md2)) {
             max-width: max-content;
         }
-        @media only screen and (max-width:em($md2)) {
+        @media only screen and (max-width: em($md2)) {
             padding: 0 0 0 10px;
         }
     }
@@ -38,7 +38,7 @@
         align-items: center;
         justify-content: center;
 
-        @media only screen and (max-width: em($md1)) {
+        @media only screen and (max-width: em($md2)) {
             margin: 10px 0;
         }
     }
@@ -56,7 +56,7 @@
 
     &__title {
         font-family: "Raleway", sans-serif;
-        @include ItC('font-size', 21, 36);
+        @include ItC("font-size", 21, 36);
         line-height: 1.2;
         margin: 0 0 rem(28) 0;
     }
@@ -81,7 +81,7 @@
 .axit-left {
     &__body {
         width: rem(360);
-        @media only screen and (max-width:em($md4)) {
+        @media only screen and (max-width: em($md4)) {
             width: rem(300);
         }
     }
@@ -110,11 +110,23 @@
     &__center {
         background-color: #fff;
         padding: 29px 0 49px 45px;
-        @include ItC('padding-left', 0, 45);
+        @include ItC("padding-left", 0, 45);
     }
 
     &__input {
         padding: 0 0 36px 0;
+        ::-webkit-input-placeholder {
+            color:#bdbdbd;
+            opacity: 1;
+        } 
+        ::-moz-placeholder {
+            color:#bdbdbd;
+            opacity: 1;
+        }
+        :-moz-placeholder {
+            color:#bdbdbd;
+            opacity: 1;
+        }
         &:last-child {
             padding: 0 0 0 0;
         }
@@ -122,8 +134,8 @@
             padding: 0 0 8px 10px;
             width: 100%;
             max-width: 285px;
-            box-shadow: 0px 1px 0px 0px rgba(0,0,1,0.15);
-            color:  #bdbdbd;
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 1, 0.15);
+            color: #bdbdbd;
         }
     }
 
@@ -141,13 +153,16 @@
 
 /* ! <axit-social-media>=============================================================================================================================================*/
 .axit-social-media {
-
     &__body {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         margin: 15px auto;
+        @media only screen and (max-width:em($md2)) {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
     }
 
     &__right {
@@ -155,20 +170,36 @@
 
     &__title {
         margin-bottom: 3px;
+        @media only screen and (max-width:em($md2)) {
+            text-align: center;
+        }
     }
 
     &__text {
         max-width: 360px;
+        @media only screen and (max-width:em($md2)) {
+            text-align: center;
+        }
     }
 
     &__left {
+        @media only screen and (max-width:em($md2)) {
+            margin: 15px 0;
+        }
+        @media only screen and (max-width:em(426)) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
 
     &__icon {
         margin: 0 45px 0 0;
+        @include ItC('margin-right', 15, 45);
     }
 
     &__icon-link {
+        margin: 5px 0;
         svg {
             fill: #ccc;
             width: 40px;

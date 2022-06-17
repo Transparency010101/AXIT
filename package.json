@@ -8,7 +8,7 @@
         "dev": "gulp",
         "build": "gulp build --build",
         "zip": "gulp deployZIP --build",
-        "svgSprive": "gulp svgSprive"
+        "spive": "gulp svgSprive"
     },
     "author": "Transparency",
     "license": "ISC",
