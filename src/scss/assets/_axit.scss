@@ -48,6 +48,7 @@
 /* ! <axit-rigth>=============================================================================================================================================*/
 .axit-rigth {
     &__body {
+        margin: 0 0 rem(40) 0;
     }
 
     &__logo {
@@ -72,7 +73,11 @@
     &__button {
         width: rem(135);
         height: rem(42);
-        margin: 0 0 rem(40) 0;
+        margin: 0 0 rem(20) 0;
+    }
+
+    &:last-child {
+        margin: 0;
     }
 }
 /* ! </axit-rigth>============================================================================================================================================*/
@@ -170,6 +175,7 @@
 
     &__title {
         margin-bottom: 3px;
+        max-width: 360px;
         @media only screen and (max-width:em($md2)) {
             text-align: center;
         }
@@ -183,26 +189,27 @@
     }
 
     &__left {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        flex: 1 1 50%;
         @media only screen and (max-width:em($md2)) {
             margin: 15px 0;
         }
         @media only screen and (max-width:em(426)) {
-            display: flex;
             justify-content: center;
-            flex-wrap: wrap;
         }
     }
 
     &__icon {
-        margin: 0 45px 0 0;
-        @include ItC('margin-right', 15, 45);
+        
     }
 
     &__icon-link {
         margin: 5px 0;
         svg {
             fill: #ccc;
-            width: 40px;
+            width: 80px;
             height: 50px;
         }
     }
