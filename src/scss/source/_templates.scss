@@ -1,4 +1,5 @@
 /* ! <Template>=============================================================================================================================================*/
+/* * buttons { */
 .button {
     display: flex;
     justify-content: center;
@@ -55,7 +56,7 @@
     &::after {
         background-color: #ffaa55;
     }
-    &__text {
+    span {
         color: #fff;
     }
 }
@@ -68,16 +69,15 @@
     &::after {
         background-color: #ffffff;
     }
-    &__text {
-        
-    }
 
     &:hover > span {
         color: #000;
         transition-delay: 0.2s;
     }
 }
+/* * buttons } */
 
+/* * texts { */
 .section-title {
     font-size: 20px;
     line-height: 43px;
@@ -85,6 +85,23 @@
     color: #212121;
 }
 
+.mini-title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $title-color;
+}
+
+.presentable-text {
+    opacity: 0.8;
+    font-family: "Raleway", sans-serif;
+    font-size: rem(16);
+    line-height: rem(23);
+    font-weight: 300;
+}
+/* * texts } */
+
+/* * lines { */
 hr.main-line {
     background-color: $second-color;
     width: 64px;
@@ -96,14 +113,27 @@ hr.second-line {
     height: 2px;
     background-color: #fff;
 }
+/* * lines } */
 
-.presentable-text {
-    opacity: 0.8;
-    font-family: "Raleway", sans-serif;
-    font-size: rem(16);
-    line-height: rem(23);
-    font-weight: 300;
+/* * social media { */
+.social-media {
+    display: flex;
+    &__icon {
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover .social-media__icon-link svg {
+            fill: $second-color;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    &__icon-link {
+    
+    }
 }
+/* * social media } */
 
 .temp-img {
     background-color: #9a9a9a;

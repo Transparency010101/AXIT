@@ -1,10 +1,10 @@
 /* : axit */
 /* : axit-rigth */
 /* : axit-left */
+/* : axit-social-media */
 
 /* ! <axit>=============================================================================================================================================*/
 .axit {
-    background-image: url("../img/axit/axit_bg.jpg");
     &__container {
         padding: 170px 0 70px 0;
     }
@@ -70,6 +70,9 @@
     &__top {
         background-color: #f5f5f5;
         width: 100%;
+
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     &__top-title {
@@ -110,6 +113,46 @@
     &__button {
         width: 100%;
         height: rem(54);
+        border-radius: 0 0 5px 5px;
+        border: 0;
     }
 }
 /* ! </axit-left>============================================================================================================================================*/
+
+/* ! <axit-social-media>=============================================================================================================================================*/
+.axit-social-media {
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 15px auto;
+    }
+
+    &__right {
+    }
+
+    &__title {
+    }
+
+    &__text {
+        max-width: 360px;
+    }
+
+    &__left {
+    }
+
+    &__icon {
+        margin: 0 45px 0 0;
+    }
+
+    &__icon-link {
+        svg {
+            fill: #ccc;
+            width: 40px;
+            height: 50px;
+        }
+    }
+}
+/* ! </axit-social-media>============================================================================================================================================*/
