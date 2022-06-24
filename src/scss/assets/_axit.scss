@@ -7,7 +7,8 @@
 .axit {
     &__container {
         padding: 170px 0 70px 0;
-        @include ItC("padding-top", 100, 170);
+        // @include ItC("padding-top", 100, 170);
+        @include AV("padding-top", 100, 170, 0);
     }
 
     &__body {
@@ -57,7 +58,8 @@
 
     &__title {
         font-family: "Raleway", sans-serif;
-        @include ItC("font-size", 21, 36);
+        // @include ItC("font-size", 21, 36);
+        @include AV("font-size", 21, 36, 0);
         line-height: 1.2;
         margin: 0 0 rem(28) 0;
     }
@@ -115,7 +117,8 @@
     &__center {
         background-color: #fff;
         padding: 29px 0 49px 45px;
-        @include ItC("padding-left", 0, 45);
+        // @include ItC("padding-left", 0, 45);
+        @include AV("padding-left", 0, 45, 0);
     }
 
     &__input {

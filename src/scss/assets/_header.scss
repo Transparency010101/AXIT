@@ -1,7 +1,7 @@
 /* ! <Header>============================================================================================================================================= */
 $contentzindex: 3;
 
-@media only screen and (max-width: em($md3)) {
+@media only screen and (max-width: $md3) {
     body.lock {
         overflow: hidden;
     }
@@ -42,14 +42,14 @@ $contentzindex: 3;
 
         position: relative;
         z-index: $contentzindex;
-        @media only screen and (max-width: em($md3)) {
+        @media only screen and (max-width: $md3) {
             display: none;
         }
     }
 
     &__burger {
         display: none;
-        @media only screen and (max-width: em($md3)) {
+        @media only screen and (max-width: $md3) {
             display: block;
             position: relative;
             z-index: $contentzindex;
@@ -92,13 +92,13 @@ $contentzindex: 3;
     }
 
     &__menu {
-        @media only screen and (max-width: em($md3)) {
+        @media only screen and (max-width: $md3) {
             position: fixed;
             top: -100%;
             left: 0;
             width: 100%;
             height: 100%;
-            padding: rem(80) 0 0 0;
+            padding: 80px 0 0 0;
             background-color: rgba($color: #000000, $alpha: 0.9);
 
             transition-duration: 400ms;
@@ -112,24 +112,24 @@ $contentzindex: 3;
     &__list {
         display: flex;
         padding: 0 5px;
-        @media only screen and (max-width: em($md3)) {
+        @media only screen and (max-width: $md3) {
             flex-direction: column;
             align-items: center;
         }
     }
 
     &__list-item {
-        margin: 0 rem(43) 0 0;
+        margin: 0 43px 0 0;
 
         &:active {
             opacity: 0.5;
         }
 
-        @media only screen and (max-width: em($md3)) {
+        @media only screen and (max-width: $md3) {
             margin: 10px auto;
         }
 
-        @media only screen and (min-width: em($md3)) {
+        @media only screen and (min-width: $md3) {
             position: relative;
             z-index: $contentzindex;
             display: block;
@@ -152,19 +152,19 @@ $contentzindex: 3;
 
         position: relative;
         z-index: $contentzindex;
-        @media only screen and (max-width: em($md3)) {
-            font-size: rem(40);
+        @media only screen and (max-width: $md3) {
+            font-size: 40px;
         }
 
-        @media only screen and (min-width: em($md3)) {
+        @media only screen and (min-width: $md3) {
             &::after {
                 content: "";
                 position: absolute;
                 left: 50%;
-                bottom: rem(-5);
+                bottom: -5px;
 
                 width: 0;
-                height: rem(1.5);
+                height: 1.5px;
                 background-color: $second-color;
 
                 transition: all 0.3s ease 0s;

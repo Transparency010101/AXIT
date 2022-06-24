@@ -5,23 +5,22 @@
 /* : Стартовые классы */
 
 // ! <Миксины>=============================================================================================================================================// !
-@mixin ItC($propetry, $mobSize, $pcSize) {
-    // * Внутри ограничивающего контейнера (Inside the container)
-    @media only screen and (max-width: em($container)) {
-        #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$container} - 320)));
+@mixin AV($propetry, $mobSize, $pcSize, $type: 1) {
+    $laptop-max-width: 1920;
+    @if $type == 1 {
+        // * Внутри ограничивающего контейнера (Inside the container)
+        @media only screen and (max-width: em($container)) {
+            #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$container} - 320)));
+        }
+    } @else if $type == 2 {
+        // * За пределами ограничивающего контейнера (Outside the container)
+        @media only screen and (min-width: em($container)) {
+            #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$laptop-max-width} - 320)));
+        }
+    } @else {
+        // * Отзывчивость по ширине (Width Responsiveness)
+        #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$laptop-max-width} - 320)));
     }
-}
-
-@mixin OtC($propetry, $mobSize, $pcSize, $canvasSize: 1440) {
-    // * За пределами ограничивающего контейнера (Outside the container)
-    @media only screen and (min-width: em($container)) {
-        #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$canvasSize} - 320)));
-    }
-}
-
-@mixin WR($propetry, $mobSize, $pcSize, $canvasSize: 1440) {
-    // * Отзывчивость по ширине (Width Responsiveness)
-    #{$propetry}: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$canvasSize} - 320)));
 }
 
 @mixin connect-font($font_name, $file_name, $weight, $style) {
@@ -66,23 +65,23 @@ $title-color: #333333;
 $additionalPx: 10; // * Нужно что бы к стенкам не прилипал контент @ px
 $container: 1095 + $additionalPx; // @ px
 
-$md1: $container;
-$md2: 992; // @ em
-$md3: 767; // @ em
-$md4: 479; // @ em
+$md1: em($container); // @ px
+$md2: em(992); // @ px
+$md3: em(767); // @ px
+$md4: em(479); // @ px
 // ! </Переменные>============================================================================================================================================// !
 
 /* ! <Стартовые классы и настройки>============================================================================================================================================= */
 ._container {
     max-width: $container + px;
     margin: 0 auto;
-    @media only screen and (max-width: em($md1)) {
+    @media only screen and (max-width: $md1) {
         max-width: 970px;
     }
-    @media only screen and (max-width: em($md2)) {
+    @media only screen and (max-width: $md2) {
         max-width: 750px;
     }
-    @media only screen and (max-width: em($md3)) {
+    @media only screen and (max-width: $md3) {
         max-width: none;
         padding: 0 10px;
     }
