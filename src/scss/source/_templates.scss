@@ -58,6 +58,8 @@
     }
     span {
         color: #fff;
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -130,7 +132,6 @@ hr.second-line {
     }
 
     &__icon-link {
-    
     }
 }
 /* * social media } */
