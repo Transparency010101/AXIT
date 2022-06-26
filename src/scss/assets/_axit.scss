@@ -221,22 +221,37 @@
 .axit-bottom {
     background-color: #f5f5f5;
     padding: 155px 0 138px 0;
+    @include AV("padding-top", 75, 155, 1);
+    @include AV("padding-bottom", 90, 138, 1);
 
     &__body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: $md2) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__tab {
+        @media only screen and (max-width: $md2) {
+            margin: 0 0 15px 0;
+        }
     }
 
     &__content {
         max-width: rem(473);
+        @media only screen and (max-width: $md2) {
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
     }
 
     &__title {
-        margin-bottom: rem(52);
+        margin-bottom: 52px;
+        @include AV("margin-bottom", 20, 52, 1);
     }
 
     &__text {
@@ -246,14 +261,21 @@
             }
         }
         margin-bottom: rem(51);
+        @include AV("margin-bottom", 25, 51, 1);
     }
 
     &__button {
         width: 121px;
         height: 46px;
+        @media only screen and (max-width: $md2) {
+            margin: 0 auto;
+        }
     }
 
     &__img {
+        img {
+            max-width: 100%
+        }
     }
 }
 
@@ -280,8 +302,7 @@
 
     &__text {
         font-family: "Open Sans";
-        font-size: 15px;
-        line-height: 20px;
+        font-size: rem(15);
         font-weight: 700;
         text-transform: uppercase;
         color: #ffffff;
