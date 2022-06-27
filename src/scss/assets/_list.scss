@@ -4,6 +4,7 @@
    &__img {
       max-width: 100%;
       img {
+         max-width: 100%;
          width: 443px;
          height: 303px;
       }
@@ -58,18 +59,17 @@
    }
 
    &__icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 50%;
-      border: 3px solid $second-color;
-
       margin-right: 30px;
-
-      width: 60px;
-      height: 40px;
-      color: #ff8b38;
+      &::before {
+         width: 40px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         border: 3px solid $second-color;
+         color: #ff8b38;
+      }
       @media only screen and (max-width: $md2) {
          margin-right: 15px;
       }

@@ -1,0 +1,84 @@
+.awesome {
+   &__body {
+      text-align: center;
+   }
+
+   &__top {
+      margin-bottom: rem(100);
+      @include AV("margin-bottom", 40, 100, 1);
+   }
+
+   &__title {
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
+      font-size: rem(36);
+      line-height: em(43);
+      color: #212121;
+      @include AV("font-size", 23, 36, 1);
+   }
+
+   &__line {
+      height: 2px;
+      background-color: orange;
+      width: 40px;
+      margin: 0 auto rem(20) auto;
+   }
+
+   &__text {
+      color: #86878b;
+      line-height: em(20);
+      max-width: rem(370);
+      margin: 0 auto;
+   }
+
+   &__columns {
+   }
+}
+
+.awesome-columns {
+   &__body {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @media only screen and (max-width: $md4) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__col {
+      flex: 1 1 33.333%;
+      margin: 0 5px 15px 5px;
+      max-width: rem(350);
+   }
+
+   &__icon {
+      margin-bottom: rem(29);
+      i:before {
+         font-size: 32px;
+         line-height: 1.2;
+         color: #ff8b38;
+
+         border-radius: 50%;
+         border: 3px solid $second-color;
+         padding: 10px 11px;
+      }
+   }
+
+   &__title {
+      font-family: sans-serif;
+      font-size: rem(20);
+      line-height: em(20);
+      font-weight: 700;
+      color: #333333;
+
+      margin-bottom: em(16);
+      @include AV("font-size", 16, 20, 1);
+   }
+
+   &__text {
+      color: #86878b;
+      line-height: em(20);
+      margin-bottom: rem(15);
+   }
+}
