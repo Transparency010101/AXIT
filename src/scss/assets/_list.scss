@@ -2,17 +2,25 @@
    padding: 107px 0 133px 0;
 
    &__img {
-      width: 453px;
-      height: 303px;
+      max-width: 100%;
+      img {
+         width: 443px;
+         height: 303px;
+      }
    }
 
    &__body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media only screen and (max-width: $md1) {
+         flex-direction: column-reverse;
+         justify-content: center;
+      }
    }
 
    &__content {
+      padding: 0 0 0 5px;
    }
 }
 
@@ -58,9 +66,13 @@
       border: 3px solid $second-color;
 
       margin-right: 30px;
+
       width: 60px;
       height: 40px;
       color: #ff8b38;
+      @media only screen and (max-width: $md2) {
+         margin-right: 15px;
+      }
    }
 
    &__content {

@@ -38,8 +38,8 @@
     }
 
     &__text {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: rem(15);
+        line-height: em(20);
         font-weight: 600;
         text-transform: capitalize;
 
@@ -81,14 +81,14 @@
 
 /* * texts { */
 .section-title {
-    font-size: 20px;
-    line-height: 43px;
+    font-size: rem(20);
+    line-height: em(43);
     font-weight: 700;
     color: #212121;
 }
 
 .mini-title {
-    font-size: 20px;
+    font-size: rem(20);
     line-height: 1.2;
     font-weight: 700;
     color: $title-color;
@@ -98,7 +98,7 @@
     opacity: 0.8;
     font-family: "Raleway", sans-serif;
     font-size: rem(16);
-    line-height: rem(23);
+    line-height: em(23);
     font-weight: 300;
 }
 /* * texts } */
