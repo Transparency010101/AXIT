@@ -1,0 +1,62 @@
+.customers {
+   padding: 108px 0 116px 0;
+   &__body {
+   }
+
+   &__top {
+      margin-bottom: rem(50);
+   }
+
+   &__top-title {
+      @include AV("font-size", 22, 36, 1);
+      @include AV("line-height", 30, 43, 1);
+   }
+
+   &__columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+}
+
+.customers-columns {
+   &__col {
+      flex: 1 1 33.333%;
+      padding: 0 45px;
+      @media only screen and (max-width: $md1) {
+         margin: 10px 0;
+      }
+   }
+
+   &__item {
+   }
+
+   &__quote {
+      background-color: #e9e9e9;
+      border-radius: 5px;
+      padding: 25px 8px;
+      margin-bottom: 25px;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+   }
+
+   &__human-icon {
+      margin-right: em(15);
+   }
+
+   &__human-human {
+   }
+
+   &__human-name {
+      font-size: rem(20);
+      line-height: 1.2;
+      font-weight: 700;
+      color: #333333;
+   }
+
+   &__human-job-title {
+   }
+}

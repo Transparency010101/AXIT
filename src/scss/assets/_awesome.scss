@@ -18,10 +18,7 @@
    }
 
    &__line {
-      height: 2px;
-      background-color: orange;
-      width: 40px;
-      margin: 0 auto rem(20) auto;
+      
    }
 
    &__text {
@@ -53,15 +50,15 @@
    }
 
    &__icon {
-      margin-bottom: rem(29);
+      margin-bottom: rem(39);
       i:before {
-         font-size: 32px;
+         font-size: 22px;
          line-height: 1.2;
          color: #ff8b38;
 
          border-radius: 50%;
          border: 3px solid $second-color;
-         padding: 10px 11px;
+         padding: 20px;
       }
    }
 
@@ -79,6 +76,6 @@
    &__text {
       color: #86878b;
       line-height: em(20);
-      margin-bottom: rem(15);
+      margin-bottom: em(15);
    }
 }

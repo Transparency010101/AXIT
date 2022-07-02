@@ -135,4 +135,25 @@ hr.second-line {
     }
 }
 /* * social media } */
+
+/* main-top { */
+.main-top {
+    text-align: center;
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: rem(36);
+        line-height: em(43);
+        color: #212121;
+    }
+
+    &__line {
+        margin: 0 auto rem(20) auto;
+    }
+
+    &__text {
+        
+    }
+}
+/* main-top } */
 /* ! </Template>============================================================================================================================================*/
